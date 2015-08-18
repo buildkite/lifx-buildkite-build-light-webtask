@@ -24,7 +24,7 @@ wt create https://raw.githubusercontent.com/buildkite/lifx-buildkite-build-light
 ```
 
 * `LIFX_ACCESS_TOKEN` is a LIFX API token you generate from [https://cloud.lifx.com/settings](https://cloud.lifx.com/settings).
-* `LIFX_BULB_SELECTOR` is LIFX API build selector to choose which bulbs to turn on (see [LIFX developer docs](http://developer.lifx.com/#selectors) for examples). The default is `all`.
+* `LIFX_BULB_SELECTOR` is LIFX API build selector to choose which bulbs to turn on (see [LIFX developer docs](http://api.developer.lifx.com/docs/selectors) for examples). The default is `all`.
 * `WEBHOOK_TOKEN` is optional, and can be provided to verify the webhook came from Buildkite.
 
 Copy the URL, and then start streaming your webtask’s logs:
@@ -43,7 +43,7 @@ Head back to your webtask logs and you should already see a `ping` event! If so,
 
 One bulb per project? One bulb per build pipeline step? A LIFX chandelier that twinkles rainbows after each deploy? The possibilities are endless!
 
-Check out [developer.lifx.com](https://developer.lifx.com/) to see what’s possible with the API, then fork this project, and get hacking.
+Check out [api.developer.lifx.com](http://api.developer.lifx.com) to see what’s possible with the API, then fork this project, and get hacking.
 
 ## License
 
