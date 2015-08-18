@@ -17,33 +17,33 @@ wt init
 
 ### Create a webtask
 
-```
+```bash
 wt create https://raw.githubusercontent.com/buildkite/lifx-buildkite-build-light-webtask/master/index.js \
-  --secret LIFX_ACCESS_TOKEN=[TOKEN FROM LIFX] \
-  --param  LIFX_BULB_SELECTOR=all
+  --secret LIFX_ACCESS_TOKEN="[TOKEN FROM LIFX]" \
+  --param  LIFX_BULB_SELECTOR="all"
 ```
 
-The `LIFX_ACCESS_TOKEN` is a LIFX API token you generate from [https://cloud.lifx.com/settings](https://cloud.lifx.com/settings).
+* `LIFX_ACCESS_TOKEN` is a LIFX API token you generate from [https://cloud.lifx.com/settings](https://cloud.lifx.com/settings).
+* `LIFX_BULB_SELECTOR` is LIFX API build selector to choose which bulbs to turn on (see [LIFX developer docs](http://developer.lifx.com/#selectors) for examples). The default is `all`.
+* `WEBHOOK_TOKEN` is optional, and can be provided to verify the webhook came from Buildkite.
 
-The `LIFX_BULB_SELECTOR` is LIFX API build selector to choose which bulbs to turn on (see [LIFX developer docs](http://developer.lifx.com/#selectors) for examples). The default is `all`.
+Copy the URL, and then start streaming your webtask’s logs:
 
-You can optionally provide a `WEBHOOK_TOKEN` to verify the webhook came from Buildkite. You'd also provide that same token in the next step, when you set up the webhook in Buildkite.
+```bash
+wt logs
+```
 
 ### Setup the webhook in Buildkite
 
-Copy the URL given to you by `wt create` and paste it into a new webhook notification in Buildkite:
+Create a new webhook notification in Buildkite and paste in your webtask's URL (and `WEBHOOK_TOKEN`, if you used one): 
 
 **Organization Settings** → **Notifications** → **Webhooks** → **Add**
+
+If you check back to your webtask logs you should already see a `ping` event!
 
 ### Trigger a build!
 
 :tada:
-
-### Check your webtask logs
-
-```
-wt logs
-```
 
 ## Personalising
 
