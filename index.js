@@ -20,7 +20,8 @@ app.post("/", function(req, res) {
   var bulbSelector     = req.webtaskContext.data.LIFX_BULB_SELECTOR || "all";
   var webhookToken     = req.webtaskContext.data.WEBHOOK_TOKEN;
 
-  if (!lifxAccessToken) return res.status(500).send("Missing LIFX_ACCESS_TOKEN secret");
+  if (!lifxAccessToken)
+    return res.status(500).send("Missing LIFX_ACCESS_TOKEN secret");
 
   // Verify the buildkite webhook token if there was one configured
   if (webhookToken && req.headers["x-buildkite-token"] != webhookToken)
@@ -32,12 +33,10 @@ app.post("/", function(req, res) {
   // Returns whatever LIFX returns, unless there"s an error and then it returns a 500
   var breatheResponse = function(params) {
     return lifxBreathe(lifxAccessToken, bulbSelector, params, function(lifxError, lifxResponse, lifxBody) {
-      if (lifxResponse && lifxResponse.statusCode) {
+      if (lifxResponse && lifxResponse.statusCode)
         res.status(lifxResponse.statusCode).send(JSON.stringify(lifxBody));
-      }
-      else {
+      else
         res.status(500).send(String(lifxError) + " - " + String(lifxBody));
-      }
     });
   }
 
