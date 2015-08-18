@@ -1,6 +1,6 @@
 # LIFX Buildkite Build Light (Webtask)
 
-An example [Webtask](https://webtask.io) webhook [Buildkite](https://buildkite.com/) endpoint for creating a [LIFX](https://lifx.com/) powered build light.
+An example [Webtask](https://webtask.io) webhook endpoint for creating a [LIFX](https://lifx.com/) powered [Buildkite](https://buildkite.com/) build light.
 
 :v::panda_face::v:
 
