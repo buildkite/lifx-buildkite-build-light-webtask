@@ -35,11 +35,9 @@ wt logs
 
 ### Setup the webhook in Buildkite
 
-Create a new webhook notification in Buildkite and paste in your webtask's URL (and `WEBHOOK_TOKEN`, if you used one): 
+Create a new webhook notification in Buildkite and paste in your webtask's URL: **Organization Settings** → **Notifications** → **Webhooks** → **Add**
 
-**Organization Settings** → **Notifications** → **Webhooks** → **Add**
-
-If you check back to your webtask logs you should already see a `ping` event!
+Head back to your webtask logs and you should already see a `ping` event!
 
 ### Trigger a build!
 
