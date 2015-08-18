@@ -6,16 +6,14 @@ An example (serverless) [Webtask](https://webtask.io) webhook endpoint for creat
 
 ![LIFX panda build light in action](http://i.imgur.com/FrBTgnf.gif)
 
-## Usage
-
-### Install webtask-cli
+## Install the webtask-cli
 
 ```bash
 npm install -h webtask-cli
 wt init
 ```
 
-### Create a webtask
+## Create the webtask
 
 ```bash
 wt create https://raw.githubusercontent.com/buildkite/lifx-buildkite-build-light-webtask/master/index.js \
@@ -33,7 +31,7 @@ Copy the URL, and then start streaming your webtask’s logs:
 wt logs
 ```
 
-### Setup the webhook in Buildkite
+## Setup the webhook notification
 
 Create a new webhook notification in Buildkite and paste in your webtask's URL: **Organization Settings** → **Notifications** → **Webhooks** → **Add**
 
