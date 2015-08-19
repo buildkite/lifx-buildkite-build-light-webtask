@@ -1,6 +1,14 @@
 # LIFX Buildkite Build Light (Webtask)
 
-An example (serverless) [Webtask](https://webtask.io) webhook endpoint for creating a [LIFX](https://lifx.com/) powered [Buildkite](https://buildkite.com/) build light.
+An example [Webtask](https://webtask.io) webhook endpoint for creating a [LIFX](https://lifx.com/) powered [Buildkite](https://buildkite.com/) build light.
+
+Create a webhook endpoint in one line using [webtask-cli](https://github.com/auth0/wt-cli):
+
+<img src="http://i.imgur.com/PWolg0s.png" width="642" alt="Screenshot of creating a webtask">
+
+Add the URL as Buildkite webhook notification:
+
+<img src="http://i.imgur.com/NuOTKz4.png" width="673" alt="Screenshot of adding it to Buildite">
 
 :v::panda_face::v:
 
@@ -37,7 +45,7 @@ wt logs
 
 Create a new webhook notification in Buildkite and paste in your webtask's URL: **Organization Settings** → **Notifications** → **Webhooks** → **Add**
 
-Head back to your webtask logs and you should already see a `ping` event!
+<img src="http://i.imgur.com/NuOTKz4.png" width="673" alt="Screenshot of adding it to Buildite">
 
 All that's left is to trigger a build! :tada:
 
