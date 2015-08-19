@@ -6,7 +6,7 @@ Create a webhook endpoint in one line using [webtask-cli](https://github.com/aut
 
 <img src="http://i.imgur.com/PWolg0s.png" width="642" alt="Screenshot of creating a webtask">
 
-Add the URL as Buildkite webhook notification:
+Add a new webhook to your Buildkite organization with the webtask URL:
 
 <img src="http://i.imgur.com/NuOTKz4.png" width="673" alt="Screenshot of adding it to Buildite">
 
