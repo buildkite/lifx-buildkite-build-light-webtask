@@ -14,7 +14,7 @@ Add the URL as Buildkite webhook notification:
 
 ![LIFX panda build light in action](http://i.imgur.com/FrBTgnf.gif)
 
-## Get started
+## Step by step
 
 ### 1. Install the webtask-cli
 
@@ -45,7 +45,7 @@ wt logs
 
 Create a new webhook notification in Buildkite and paste in your webtask's URL: **Organization Settings** → **Notifications** → **Webhooks** → **Add**
 
-<img src="http://i.imgur.com/NuOTKz4.png" width="673" alt="Screenshot of adding it to Buildite">
+Make sure to enable all the `build` scopes, as well as the `ping` (so you can see a ping notification in your `wt logs` straight after saving your webhook).
 
 All that's left is to trigger a build! :tada:
 
