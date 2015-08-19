@@ -49,6 +49,10 @@ Make sure to enable all the `build` scopes, as well as the `ping` (so you can se
 
 All that's left is to trigger a build! :tada:
 
+### 4. Debugging
+
+You can use the request logs on the bottom of the Buildkite webhook settings page to see the request to and response from your webtask, and you can use `wt logs` to see the logs from your webtask container.
+
 ## Personalising
 
 One bulb per project? One bulb per build pipeline step? A LIFX chandelier that twinkles rainbows after each deploy? The possibilities are endless!
