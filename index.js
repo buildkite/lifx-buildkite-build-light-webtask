@@ -4,7 +4,7 @@ var request = require("request");
 
 function lifxBreathe(lifxAccessToken, bulbSelector, params, callback) {
   request({
-    url: "https://api.lifx.com/v1beta1/lights/" + bulbSelector + "/effects/breathe.json",
+    url: "https://api.lifx.com/v1/lights/" + bulbSelector + "/effects/breathe.json",
     method: "POST",
     json: params,
     headers: { "Authorization":  "Bearer " + lifxAccessToken }
